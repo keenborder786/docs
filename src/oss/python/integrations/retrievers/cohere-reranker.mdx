@@ -302,8 +302,6 @@ prompt = client.pull_prompt("rlm/rag-prompt", include_model=True)
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
 
-llm=Cohere(temperature=0)
-
 qa_chain = (
     {
         "context": compression_retriever | format_docs,
