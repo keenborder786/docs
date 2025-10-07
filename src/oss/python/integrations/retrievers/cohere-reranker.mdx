@@ -276,7 +276,9 @@ Do note that it is mandatory to specify the model name in CohereRerank!
 
 ```python
 from langsmith import Client
-from langchain_core.vectorstores import ContextualCompressionRetriever
+from langchain_classic.retrievers.contextual_compression import (
+    ContextualCompressionRetriever,
+)
 from langchain_cohere import ChatCohere, CohereRerank
 
 llm = ChatCohere(temperature=0)
